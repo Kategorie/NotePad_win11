@@ -1,7 +1,22 @@
 import sys
-import os
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QTextEdit, QVBoxLayout, QWidget, QPushButton, QFileDialog, QToolBar, QAction, QMenuBar, QMenu, QTreeView, QFileSystemModel, QVBoxLayout, QSplitter
+from PyQt5.QtWidgets import QApplication
+# from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QTextEdit, QVBoxLayout, QWidget, QPushButton, QFileDialog, QToolBar, QAction, QMenuBar, QMenu, QTreeView, QFileSystemModel, QVBoxLayout, QSplitter
 
+# 외부 라이브러리 용
+from lib.Simple_PySide_Base_master.mainUI_src.main import MainWindow ## 경로 문제 있음
+from PySide2 import QtGui
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    QtGui.QFontDatabase.addApplicationFont('fonts/segoeui.ttf')
+    QtGui.QFontDatabase.addApplicationFont('fonts/segoeuib.ttf')
+    window = MainWindow()
+    sys.exit(app.exec_())
+
+
+
+"""
+# app_function으로 이동
 class TabbedNotepad(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -111,11 +126,16 @@ class TabbedNotepad(QMainWindow):
 
     def close_tab(self, index):
         # 탭 닫기 기능
-        self.tab_widget.removeTab(index)
+        self.tab_widget.removeTab(index)"""
 
 
+"""
+################################
+ 초기 테스트 버전
+###############################
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TabbedNotepad()
     window.show()
     sys.exit(app.exec_())
+"""
