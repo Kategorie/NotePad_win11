@@ -1,7 +1,7 @@
 ### My list ###
-
+*.pyc
 .venv/
-
+.vscode/
 ###############
 
 
@@ -21,7 +21,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+#lib/
 lib64/
 parts/
 sdist/
