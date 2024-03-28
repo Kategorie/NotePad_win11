@@ -14,7 +14,13 @@
 ##
 ################################################################################
 
-import sys
+##################################################################
+# 패키지 경로 설정(현재 디렉토리의 상위 디렉토리 경로를 환경변수로 추가)
+import sys, os
+if os.path.dirname(os.path.abspath(__file__)) not in sys.path:
+    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+##################################################################
+
 import platform
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
@@ -22,10 +28,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 
 # GUI FILE
-from uis_src.app_modules import *
-from uis_graphic.ui_main import *
-from uis_graphic.ui_functions import *
-from uis_graphic.ui_styles import *
+from app_modules import *
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -214,12 +217,3 @@ class MainWindow(QMainWindow):
     ########################################################################
     ## END ==> APP EVENTS
     ############################## ---/--/--- ##############################
-
-"""
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    QtGui.QFontDatabase.addApplicationFont('fonts/segoeui.ttf')
-    QtGui.QFontDatabase.addApplicationFont('fonts/segoeuib.ttf')
-    window = MainWindow()
-    sys.exit(app.exec_())
-"""

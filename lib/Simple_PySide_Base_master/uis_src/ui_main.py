@@ -22,7 +22,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QRadialGradient)
 from PySide2.QtWidgets import *
 
-from uis_src.files_rc import *
+from files_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):

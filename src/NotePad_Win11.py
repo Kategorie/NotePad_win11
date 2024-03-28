@@ -1,14 +1,13 @@
 ##################################################################
 # 패키지 경로 설정(현재 디렉토리의 상위 디렉토리 경로를 환경변수로 추가)
 import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if os.path.dirname(os.path.dirname(os.path.abspath(__file__))) not in sys.path:
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ##################################################################
 
 from PyQt5.QtWidgets import QApplication
-# 기존 내 코드 패키지
-# from PyQt5.QtWidgets import QApplication, QMainWindow, QTabWidget, QTextEdit, QVBoxLayout, QWidget, QPushButton, QFileDialog, QToolBar, QAction, QMenuBar, QMenu, QTreeView, QFileSystemModel, QVBoxLayout, QSplitter
 
-# 외부 라이브러리 용
+# 외부 라이브러리
 from lib.Simple_PySide_Base_master.uis_src.main_ui import *
 from PySide2 import QtGui
 

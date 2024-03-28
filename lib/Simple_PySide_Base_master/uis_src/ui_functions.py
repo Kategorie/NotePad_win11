@@ -13,22 +13,9 @@
 ## https://doc.qt.io/qtforpython/licenses.html
 ##
 ################################################################################
-##################################################################
-# 패키지 경로 설정(현재 디렉토리의 상위 디렉토리 경로를 환경변수로 추가)
-import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-##################################################################
-print(sys.path)
-
-"""from PySide2 import QtCore, QtGui
-from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
-from PySide2.QtWidgets import *"""
 
 ## ==> GUI FILE
-import lib.Simple_PySide_Base_master.uis_src.main_ui as aa
-#from mainUI_src.mainUI import *
-from uis_graphic.ui_styles import Style
+from main_ui import *
 
 ## ==> GLOBALS
 GLOBAL_STATE = 0
@@ -37,7 +24,7 @@ GLOBAL_TITLE_BAR = True
 ## ==> COUT INITIAL MENU
 count = 1
 
-class UIFunctions(aa.MainWindow):
+class UIFunctions(MainWindow):
 
     ## ==> GLOBALS
     GLOBAL_STATE = 0

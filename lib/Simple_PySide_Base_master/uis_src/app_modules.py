@@ -14,20 +14,14 @@
 ##
 ################################################################################
 
-##################################################################
-# 패키지 경로 설정(현재 디렉토리의 상위 디렉토리 경로를 환경변수로 추가)
-import sys, os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-##################################################################
-print(sys.path)
 # GUI FILE
-from uis_graphic import ui_main
+from ui_main import Ui_MainWindow
 
 # IMPORT QSS CUSTOM
-from uis_graphic import ui_styles
+from ui_styles import Style
 
 # IMPORT FUNCTIONS
-from uis_graphic import ui_functions
+from ui_functions import *
 
 ## ==> APP FUNCTIONS
-from app_functions import Functions
+from app_functions import *

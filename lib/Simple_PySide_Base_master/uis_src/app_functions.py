@@ -15,9 +15,7 @@
 ################################################################################
 
 ## ==> GUI FILE
-from lib.Simple_PySide_Base_master.uis_src.main_ui import MainWindow
+from main_ui import *
 
 class Functions(MainWindow):
     pass
-
-
